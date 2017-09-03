@@ -32,27 +32,6 @@ var email = {
     text: config.message
 };
 
-/* Execute every hour. */
-var checkHourly = setInterval(() => {
-    var d = new Date();
-    var date = d.getDate();
-    var month = d.getMonth() + 1;
-    var year = d.getFullYear();
-    // Check we are within date.
-    if (year < stopDate.year) {
-        checkDate(d);
-    }
-    else if ((year == stopDate.year) && (month <= stopDate.month)) {
-        checkDate(d);
-    }
-    else if ((year == stopDate.year) && (month <= stopDate.month) && (date <= stopDate.day)) {
-        checkDate(d);
-    } else {
-        // Passed stop date, clear the interval.
-        clearInterval(checkHourly);
-    }
-}, 3600000);
-
 /* Returns the number of days remaining in the provided month. */
 function daysRemaining() {
     var d = new Date();
@@ -104,6 +83,29 @@ function fire() {
         }
       });
 }
+
+/* Execute every hour. */
+var checkHourly = setInterval(() => {
+    var d = new Date();
+    var date = d.getDate();
+    var month = d.getMonth() + 1;
+    var year = d.getFullYear();
+    // Check we are within date.
+    if (year < stopDate.year) {
+        checkDate(d);
+    }
+    else if ((year == stopDate.year) && (month <= stopDate.month)) {
+        checkDate(d);
+    }
+    else if ((year == stopDate.year) && (month <= stopDate.month) && (date <= stopDate.day)) {
+        checkDate(d);
+    } else {
+        // Passed stop date, clear the interval.
+        clearInterval(checkHourly);
+    }
+}, 3600000);
+
+console.log(dateStr() +  ' :: Started running');
 
 
 /*************\
