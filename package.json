@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/acwilson96/rent_reminder/issues"
   },
-  "homepage": "https://github.com/acwilson96/rent_reminder#readme"
+  "homepage": "https://github.com/acwilson96/rent_reminder#readme",
+  "dependencies": {
+    "nodemailer": "^4.1.0"
+  }
 }
