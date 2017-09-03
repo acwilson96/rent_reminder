@@ -1,0 +1,25 @@
+{
+  "name": "rent_reminder",
+  "version": "1.0.0",
+  "description": "An application to run on my raspberry pi to send email reminders to my flatmates to pay rent.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acwilson96/rent_reminder.git"
+  },
+  "keywords": [
+    "rent",
+    "reminder",
+    "server",
+    "email"
+  ],
+  "author": "Alexander Wilson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/acwilson96/rent_reminder/issues"
+  },
+  "homepage": "https://github.com/acwilson96/rent_reminder#readme"
+}
